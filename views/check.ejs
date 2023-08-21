@@ -1,0 +1,213 @@
+<html>
+
+<head>
+
+<style>
+
+
+		.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+ 
+<article class="card">
+	<div class="container">
+		<div class="card-title">
+			<h2>Payment</h2>
+		</div>
+		<div class="card-body">
+			<div class="payment-type">
+				<h4>Choose payment method below</h4>
+				<div class="types flex justify-space-between">
+					<div class="type selected">
+						<div class="logo">
+							<i class="far fa-credit-card"></i>
+						</div>
+						<div class="text">
+							<p>Pay with Credit Card</p>
+						</div>
+					</div>
+					<div class="type">
+						<div class="logo">
+							<i class="fab fa-paypal"></i>
+						</div>
+						<div class="text">
+							<p>Pay with PayPal</p>
+						</div>
+					</div>
+					<div class="type">
+						<div class="logo">
+							<i class="fab fa-amazon"></i>
+						</div>
+						<div class="text">
+							<p>Pay with Amazon</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="payment-info flex justify-space-between">
+				<div class="column billing">
+					<div class="title">
+						<div class="num">1</div>
+						<h4>Billing Info</h4>
+					</div>
+					<div class="field full">
+						<label for="name">Full Name</label>
+						<input id="name" type="text" placeholder="Full Name">
+					</div>
+					<div class="field full">
+						<label for="address">Billing Address</label>
+						<input id="address" type="text" placeholder="Billing Address">
+					</div>
+					<div class="flex justify-space-between">
+						<div class="field half">
+							<label for="city">City</label>
+							<input id="city" type="text" placeholder="City">
+						</div>
+						<div class="field half">
+							<label for="state">State</label>
+							<input id="state" type="text" placeholder="State">
+						</div>
+					</div>
+					<div class="field full">
+						<label for="zip">Zip</label>
+						<input id="zip" type="text" placeholder="Zip">
+					</div>
+				</div>
+				<div class="column shipping">
+					<div class="title">
+						<div class="num">2</div>
+						<h4>Credit Card Info</h4>
+					</div>
+					<div class="field full">
+						<label for="name">Cardholder Name</label>
+						<input id="name" type="text" placeholder="Full Name">
+					</div>
+					<div class="field full">
+						<label for="address">Card Number</label>
+						<input id="address" type="text" placeholder="1234-5678-9012-3456">
+					</div>
+					<div class="flex justify-space-between">
+						<div class="field half">
+							<label for="city">Exp. Month</label>
+							<input id="city" type="text" placeholder="12">
+						</div>
+						<div class="field half">
+							<label for="state">Exp. Year</label>
+							<input id="state" type="text" placeholder="19">
+						</div>
+					</div>
+					<div class="field full">
+						<label for="zip">CVC Number</label>
+						<input id="zip" type="text" placeholder="468">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="card-actions flex justify-space-between">
+			<div class="flex-start">
+				<button class="button button-secondary">Return to Store</button>
+			</div>
+			<div class="flex-end">
+				<button class="button button-link">Back to Shipping</button>
+				<button class="button button-primary">Proceed</button>
+			</div>
+		</div>
+	</div>
+</article>
+<footer>
+	Design based on example found <a href="https://uxdesign.cc/understanding-user-psychology-to-improve-your-product-design-f4e5f930b89e" target="_blank">here</a>
+</footer>
+
+</body>
+
+</html>
