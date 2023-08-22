@@ -1,18 +1,9 @@
 const express=require('express');
-const router=express.Router();
-const fs=require('fs')
-
-router.get('/store',(req,res)=>{
-	fs.readFile('items.json',(err,data)=>{
-		if(err){
-			res.status(500).send('erroe')
-		}
-
-        res.render('store.ejs',{
-            items:JSON.parse(data),
-			key:process.env.Publishable_key,
-        })
-	})
-})
-
-module.exports=router;
+const dotenv=require('dotenv');
+const path=require('path')
+const stripe=require('stripe')(process.env.SECRETE_KEY);
+dotenv.config();
+const app=express();
+const publish=process.env.Publishable_key;
+app.use(express.json());
+const router=express.Router()
