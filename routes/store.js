@@ -9,7 +9,8 @@ router.get('/store',(req,res)=>{
 		}
 
         res.render('store.ejs',{
-            items:JSON.parse(data)
+            items:JSON.parse(data),
+			key:process.env.Publishable_key,
         })
 	})
 })

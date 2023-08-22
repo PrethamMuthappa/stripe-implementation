@@ -4,7 +4,7 @@
 		
 		{
 			"id":1,
-			"name":"album 1",
+			"name":"album test 1",
 			"price":1299,
 			"imagename":"Album 1.png"
 		},
@@ -40,7 +40,7 @@
 			"id":5,
 			"name":"T-shirt",
 			"price":1999,
-			"imagename":"shirt.png"
+			"imagename":"/shirt.png"
 		},
 
 

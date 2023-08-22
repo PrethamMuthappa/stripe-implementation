@@ -4,7 +4,12 @@
         <title>The Generics | Store</title>
         <meta name="description" content="This is the description">
         <link rel="stylesheet" href="styles.css" />
-        <script src="store.js" async></script>
+        <script src="https://checkout.stripe.com/checkout.js" defer></script>
+        <script>
+            var stripepublickey= '<%= key %>'
+        </script>
+        <script src="store.js" defer></script>
+        
     </head>
     <body>
         <header class="main-header">
@@ -25,7 +30,7 @@
                 
                 <div class="shop-item" data-item-id="<%= item.id %>">
                     <span class="shop-item-title"> <%= item.name %> </span>
-                    <img class="shop-item-image" src="Images/Album 1.png">
+                    <img class="shop-item-image" src="Images/<%=item.imagename %>">
                     <div class="shop-item-details">
                         <span class="shop-item-price"><%= item.price %></span>
                         <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
@@ -36,24 +41,23 @@
             </div>
         </section>
         <section class="container content-section">
+           
+            
             <h2 class="section-header">MERCH</h2>
             <div class="shop-items">
-                <div class="shop-item">
-                    <span class="shop-item-title">T-Shirt</span>
-                    <img class="shop-item-image" src="Images/Shirt.png">
-                    <div class="shop-item-details">
-                        <span class="shop-item-price">$19.99</span>
-                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                <% items.merch.forEach(item => { %>
+                    
+                
+                    <div class="shop-item" data-item-id="<%= item.id %>">
+                        <span class="shop-item-title"> <%= item.name %> </span>
+                        <img class="shop-item-image" src="Images/<%= item.imagename  %>">
+                        <div class="shop-item-details">
+                            <span class="shop-item-price"><%= item.price %></span>
+                            <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
+                        </div>
                     </div>
-                </div>
-                <div class="shop-item">
-                    <span class="shop-item-title">Coffee Cup</span>
-                    <img class="shop-item-image" src="Images/Cofee.png">
-                    <div class="shop-item-details">
-                        <span class="shop-item-price">$6.99</span>
-                        <button class="btn btn-primary shop-item-button" type="button">ADD TO CART</button>
-                    </div>
-                </div>
+               <%  }); %>
+               
             </div>
         </section>
         <section class="container content-section">
