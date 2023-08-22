@@ -28,7 +28,7 @@
 			"name":"album 4",
 			"price":1999,
 			"imagenmae":"Album 4.png"
-		},
+		}
 
 	
 
@@ -49,7 +49,7 @@
 			"name":"coffee cup",
 			"price":699,
 			"imagenmae":"cofee.png"
-		},
+		}
 
 	]
 }
