@@ -9,6 +9,7 @@ const publish=process.env.Publishable_key;
 app.use(express.json());
 app.set('views',path.join(__dirname,'views'))
 app.set('view engine','ejs');
+const pays=require('./routes/pay')
 
 
 
@@ -17,9 +18,8 @@ app.get('/',(req,res)=>{
 	res.render('index')
 });
 
-app.get('/check',(req,res)=>{
-   res.render('check')
-})
+app.get('/',pays);
+
 
 
 

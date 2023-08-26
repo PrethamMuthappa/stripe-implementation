@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="/pay" method="post">
+        <script
+            src="//checkout.stripe.com/v2/checkout.js"
+            class="stripe-button"
+            data-key="<%= key %>"
+            data-amount="9000"
+            data-currency="usd"
+            data-name="pretham"
+            data-description="buy"
+            data-locale="auto">
+
+        </script>
+    </form>
+    
+    <script src="/routes/pay.js"></script>
+</html>
