@@ -11,7 +11,7 @@ app.set('views',path.join(__dirname,'views'))
 app.set('view engine','ejs');
 const router=express.Router();
 
-router.get('/pay',(req,res)=>{
+router.get('/',(req,res)=>{
 
     res.render('pay',{
         key:publish,
@@ -19,8 +19,8 @@ router.get('/pay',(req,res)=>{
     
 })
 
-router.post('/payment',async(req,res)=>{
-  await  stripe.customers.create({
+router.post('/payment',(req,res)=>{
+     stripe.customers.create({
         email:req.body.stripeEmail,
         source:req.body.stripeToken,
         name:'pretham',
@@ -37,7 +37,7 @@ router.post('/payment',async(req,res)=>{
             amount:7000,
             description:'buy',
             currency:'usd',
-            customer:'pretham'
+            customer:"pretham",
         })
         
 

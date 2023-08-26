@@ -13,12 +13,8 @@ const pays=require('./routes/pay')
 
 
 
-app.get('/',(req,res)=>{
- 
-	res.render('index')
-});
-
 app.get('/',pays);
+app.post('/payment',pays);
 
 
 
